@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .job-listing {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        .view-details-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .view-details-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        .apply-btn {
+            display: block;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Job Listing -->
+    <div class="job-listing">
+        <h2>Senior Web Developer</h2>
+        <p>Company: Tech Solutions</p>
+        <p>Location: New York, NY</p>
+        <p>Type: Full-time</p>
+        <button class="view-details-btn" onclick="showDetails()">View Details</button>
+    </div>
+
+    <!-- Modal for Job Details -->
+    <div id="jobDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeDetails()">&times;</span>
+            <h3>Senior Web Developer</h3>
+            <p><strong>Company:</strong> Tech Solutions</p>
+            <p><strong>Location:</strong> New York, NY</p>
+            <p><strong>Type:</strong> Full-time</p>
+            <p><strong>Brief Job Information:</strong> Join our dynamic team as a Senior Web Developer where you will design and build innovative web solutions. You will work closely with other developers, designers, and stakeholders to implement modern web features, ensure performance optimization, and maintain the overall quality of the platform. This role requires proficiency in JavaScript, front-end frameworks, and back-end development.</p>
+            
+            <!-- Apply Now Button -->
+            <a href="apply-form.html" class="apply-btn">Apply Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the job details modal
+        function showDetails() {
+            document.getElementById("jobDetailsModal").style.display = "block";
+        }
+
+        // Function to close the job details modal
+        function closeDetails() {
+            document.getElementById("jobDetailsModal").style.display = "none";
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById("jobDetailsModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .jobs-container {
+            margin: 40px auto; /* Center the container */
+            width: 80%;
+            max-width: 800px;
+        }
+        .box-container {
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Space between items */
+        }
+        .job-listing {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* For positioning inner elements */
+        }
+        .job-listing h2 {
+            margin-top: 0;
+        }
+        .job-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .job-info span {
+            font-weight: bold;
+        }
+        .view-details-btn {
+            background-color: #4b6cb7;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .view-details-btn:hover {
+            background-color: #182848;
+        }
+        .company {
+            display: flex; /* Flexbox for company info */
+            align-items: center; /* Center vertically */
+        }
+        .company img {
+            width: 50px; /* Adjust company logo size */
+            height: 50px; /* Adjust company logo size */
+            margin-right: 10px; /* Space between logo and text */
+            border-radius: 50%; /* Optional: make it circular */
+        }
+        .location {
+            color: #777; /* Slightly lighter color for location */
+        }
+        .tags {
+            display: flex; /* Flexbox for tags */
+            justify-content: space-between; /* Space out tags */
+            margin: 10px 0; /* Space above and below tags */
+        }
+        .flex-btn {
+            display: flex; /* Flexbox for buttons */
+            justify-content: space-between; /* Space between buttons */
+            margin-top: 10px; /* Space above buttons */
+        }
+        .btn {
+            background-color: #4b6cb7;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #182848;
+        }
